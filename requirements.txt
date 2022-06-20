@@ -6,3 +6,5 @@ tensorboardX
 opencv-python
 tqdm
 imgaug
+torchvision
+onnx

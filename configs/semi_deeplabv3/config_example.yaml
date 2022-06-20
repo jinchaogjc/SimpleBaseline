@@ -4,7 +4,7 @@ DATASET:
     STD: [0.5, 0.5, 0.5]
     MODE: 'testval'
     SEMI:
-        TRAIN_SPLIT_L: 'train_18unlabel_deeplabv3_1t'
+        TRAIN_SPLIT_L: 'train_18label'
         TRAIN_SPLIT_U: 'train_18unlabel_deeplabv3_1t'
         VAL_SPLIT: 'val_fine'
 
@@ -43,8 +43,8 @@ TRAIN:
     VAL_PRE_ITERS: 500
     CROP_SIZE: (769, 769)
     USING_DSBN: True
-    BACKBONE_PRETRAINED_PATH: '/**/tf-xception65-270e81cf.pth'
-    PRETRAINED_MODEL_PATH: "/**/best_model.pth"
+    BACKBONE_PRETRAINED_PATH: './data/tf-xception65-270e81cf.pth'
+#    PRETRAINED_MODEL_PATH: "./data/deeplabv3_plus_xception_segmentron.pth"
     SEMI:
         BATCH_SIZE_L: 2
         BATCH_SIZE_U: 2
@@ -67,7 +67,7 @@ SOLVER:
     AUX: False
     AUX_WEIGHT: 0.5
     REGULAR_MINE:
-        REGULAR_PRETRAINED_PATH: "/**/best_model.pth"
+#        REGULAR_PRETRAINED_PATH: "./data/deeplabv3_plus_xception_segmentron.pth"
         WIGHT_DECAT: 1e-4
     LOSS_NAME: 'DynamicCEAndSCELoss'
     CEAndSCELoss:

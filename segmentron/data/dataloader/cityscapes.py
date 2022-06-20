@@ -38,9 +38,12 @@ class CitySegmentation(SegmentationDataset):
         elif split == 'train_18unlabel':
             _split_f = ["data/train_fine_18unlabel.txt"]
         elif split == 'train_18unlabel_deeplabv3_1t':
+            # _split_f = [
+            #             "data/train_fine_18unlabel_pseudo_TTA_1t_deeplabv3.txt",
+            #             "data/train_fine_18label.txt"]
             _split_f = [
-                        "data/train_fine_18unlabel_pseudo_TTA_1t_deeplabv3.txt",
-                        "data/train_fine_18label.txt"]
+
+                "data/train_fine_18unlabel.txt"]
 
         elif split == 'train_fine_12label':
             _split_f = ["data/train_fine_12label.txt"]
